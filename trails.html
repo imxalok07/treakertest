@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Trails - Trekker's Companion</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+      <div class="logo">
+          <h1>Trekker's Companion</h1>
+          <p>Your All-in-One Uttarakhand Trekking App</p>
+      </div>
+      <nav>
+          <ul>
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="trails.html">Trails</a></li>
+              <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
+              <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> 
+          </ul>
+      </nav>
+      <div class="auth-buttons">
+          <a href="signin.html" class="btn btn-small login-btn">Login</a>
+          <a href="signup.html" class="btn btn-small signup-btn">Sign Up</a>
+      </div>
+      <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+      </div>
+  </header>
+
+
+  <main style="padding-top: 8rem;"> 
+    <section class="trails-hero">
+      <div class="trails-hero-content">
+        <h1>Explore Uttarakhand Trails</h1>
+        <p>Discover the most beautiful treks in the Land of Gods</p>
+      </div>
+    </section>
+
+    <section class="trails-filter">
+      <div class="container">
+        <div class="filter-controls">
+          <div class="filter-group">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+              <option value="all">All Levels</option>
+              <option value="easy">Easy</option>
+              <option value="moderate">Moderate</option>
+              <option value="difficult">Difficult</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="duration">Duration:</label>
+            <select id="duration">
+              <option value="all">Any Duration</option>
+              <option value="1-3">1-3 Days</option>
+              <option value="4-7">4-7 Days</option>
+              <option value="8+">8+ Days</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="season">Best Season:</label>
+            <select id="season">
+              <option value="all">Any Season</option>
+              <option value="spring">Spring</option>
+              <option value="summer">Summer</option>
+              <option value="monsoon">Monsoon</option>
+              <option value="autumn">Autumn</option>
+              <option value="winter">Winter</option>
+            </select>
+          </div>
+          <button id="filter-button" class="btn-small">Apply Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="all-trails">
+      <div class="container">
+        <div class="trails-grid">
+          <div class="trail-card">
+            <div class="trail-img" style="background-image: url('attached_assets/valley of flowers..jpg')"></div>
+            <div class="trail-info">
+              <div class="trail-difficulty">
+                <span class="difficulty moderate">Moderate</span>
+              </div>
+              <h3>Valley of Flowers</h3>
+              <p>A mesmerizing trek through vibrant alpine flowers in the Nanda Devi Biosphere Reserve.</p>
+              <div class="trail-meta">
+                <span><i class="fas fa-mountain"></i> 3,658 m</span>
+                <span><i class="fas fa-clock"></i> 6 Days</span>
+                <span><i class="fas fa-calendar"></i> Jul-Sep</span>
+              </div>
+              <a href="trek-template.html" class="btn-small view-details">View Details</a>
+            </div>
+          </div>
+
+          <div class="trail-card">
+            <div class="trail-img" style="background-image: url('attached_assets/rupkundh.jpg')"></div>
+            <div class="trail-info">
+              <div class="trail-difficulty">
+                <span class="difficulty difficult">Difficult</span>
+              </div>
+              <h3>Roopkund Trek</h3>
+              <p>A challenging trek to a mysterious glacial lake filled with ancient skeletons.</p>
+              <div class="trail-meta">
+                <span><i class="fas fa-mountain"></i> 5,029 m</span>
+                <span><i class="fas fa-clock"></i> 8 Days</span>
+                <span><i class="fas fa-calendar"></i> May-Jun, Sep-Oct</span>
+              </div>
+              <a href="trek-template.html" class="btn-small view-details">View Details</a>
+            </div>
+          </div>
+
+          <div class="trail-card">
+            <div class="trail-img" style="background-image: url('attached_assets/Daraya bugyal.jpg')"></div>
+            <div class="trail-info">
+              <div class="trail-difficulty">
+                <span class="difficulty easy">Easy</span>
+              </div>
+              <h3>Dayara Bugyal</h3>
+              <p>A beautiful meadow trek perfect for beginners with stunning views of the Himalayan range.</p>
+              <div class="trail-meta">
+                <span><i class="fas fa-mountain"></i> 3,600 m</span>
+                <span><i class="fas fa-clock"></i> 4 Days</span>
+                <span><i class="fas fa-calendar"></i> Apr-Jun, Sep-Nov</span>
+              </div>
+              <a href="trek-template.html" class="btn-small view-details">View Details</a>
+            </div>
+          </div>
+
+          <div class="trail-card">
+            <div class="trail-img" style="background-image: url('attached_assets/har ki dun.webp')"></div>
+            <div class="trail-info">
+              <div class="trail-difficulty">
+                <span class="difficulty difficult">Difficult</span>
+              </div>
+              <h3>Har Ki Dun</h3>
+              <p>An ancient trail with stunning views of Swargarohini peaks and unique Himalayan villages.</p>
+              <div class="trail-meta">
+                <span><i class="fas fa-mountain"></i> 3,566 m</span>
+                <span><i class="fas fa-clock"></i> 7 Days</span>
+                <span><i class="fas fa-calendar"></i> Mar-Jun, Sep-Nov</span>
+              </div>
+              <a href="trek-template.html" class="btn-small view-details">View Details</a>
+            </div>
+          </div>
+
+          <div class="trail-card">
+            <div class="trail-img" style="background-image: url('attached_assets/CHOPTA CHANDRSHILA.jpg')"></div>
+            <div class="trail-info">
+              <div class="trail-difficulty">
+                <span class="difficulty moderate">Moderate</span>
+              </div>
+              <h3>Chopta Chandrashila</h3>
+              <p>Trek through pristine forests to Tungnath temple and Chandrashila peak with 360° Himalayan views.</p>
+              <div class="trail-meta">
+                <span><i class="fas fa-mountain"></i> 4,000 m</span>
+                <span><i class="fas fa-clock"></i> 5 Days</span>
+                <span><i class="fas fa-calendar"></i> Apr-Jun, Sep-Nov</span>
+              </div>
+              <a href="trek-template.html" class="btn-small view-details">View Details</a>
+            </div>
+          </div>
+
+          <div class="trail-card">
+            <div class="trail-img" style="background-image: url('attached_assets/nag tibba.jpg')"></div>
+            <div class="trail-info">
+              <div class="trail-difficulty">
+                <span class="difficulty easy">Easy</span>
+              </div>
+              <h3>Nag Tibba</h3>
+              <p>A perfect weekend trek near Mussoorie with great views of Bandarpunch and Swargarohini ranges.</p>
+              <div class="trail-meta">
+                <span><i class="fas fa-mountain"></i> 3,050 m</span>
+                <span><i class="fas fa-clock"></i> 2 Days</span>
+                <span><i class="fas fa-calendar"></i> Oct-Jun</span>
+              </div>
+              <a href="trek-template.html" class="btn-small view-details">View Details</a>
+            </div>
+          </div>
+
+          <div class="trail-card">
+            <div class="trail-img" style="background-image: url('https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+            <div class="trail-info">
+              <div class="trail-difficulty">
+                <span class="difficulty difficult">Difficult</span>
+              </div>
+              <h3>Kedartal</h3>
+              <p>A challenging high-altitude trek to the emerald Kedartal lake with views of Thalaysagar peak.</p>
+              <div class="trail-meta">
+                <span><i class="fas fa-mountain"></i> 4,912 m</span>
+                <span><i class="fas fa-clock"></i> 7 Days</span>
+                <span><i class="fas fa-calendar"></i> May-Jun, Sep-Oct</span>
+              </div>
+              <a href="trek-template.html" class="btn-small view-details">View Details</a>
+            </div>
+          </div>
+
+          <div class="trail-card">
+            <div class="trail-img" style="background-image: url('attached_assets/KURI PASS.webp')"></div>
+            <div class="trail-info">
+              <div class="trail-difficulty">
+                <span class="difficulty moderate">Moderate</span>
+              </div>
+              <h3>Kuari Pass</h3>
+              <p>Lord Curzon's trail with panoramic views of Nanda Devi, Dronagiri, and Kamet peaks.</p>
+              <div class="trail-meta">
+                <span><i class="fas fa-mountain"></i> 3,876 m</span>
+                <span><i class="fas fa-clock"></i> 6 Days</span>
+                <span><i class="fas fa-calendar"></i> Apr-Jun, Sep-Nov</span>
+              </div>
+              <a href="trek-template.html" class="btn-small view-details">View Details</a>
+            </div>
+          </div>
+
+          <div class="trail-card">
+            <div class="trail-img" style="background-image: url('attached_assets/Daraya bugyal.jpg')"></div>
+            <div class="trail-info">
+              <div class="trail-difficulty">
+                <span class="difficulty easy">Easy</span>
+              </div>
+              <h3>Deoria Tal</h3>
+              <p>A beautiful lake trek with perfect reflections of Chaukhamba peaks in the crystal clear waters.</p>
+              <div class="trail-meta">
+                <span><i class="fas fa-mountain"></i> 2,438 m</span>
+                <span><i class="fas fa-clock"></i> 2 Days</span>
+                <span><i class="fas fa-calendar"></i> Year-round</span>
+              </div>
+              <a href="trek-template.html" class="btn-small view-details">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>Trekker's Companion</h3>
+        <p>Your All-in-One Uttarakhand Trekking App</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="trails.html">Trails</a></li>
+          <li><a href="guides.html">Guides</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li> 
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe for trek updates and exclusive offers</p>
+        <form>
+          <input type="email" placeholder="Your Email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023 Trekker's Companion. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

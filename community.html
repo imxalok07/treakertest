@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community - Trekker's Companion</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>Trekker's Companion</h1>
+      <p>Your All-in-One Uttarakhand Trekking App</p>
+    </div>
+    <nav>
+      <ul>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="trails.html">Trails</a></li>
+        <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <a href="#" class="btn btn-small login-btn">Login</a>
+      <a href="#" class="btn btn-small signup-btn">Sign Up</a>
+    </div>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+  <main style="padding-top: 8rem;">
+
+    <main style="padding-top: 8rem;">
+      <section class="trails-hero">
+        <div class="trails-hero-content">
+          <h1>Trekkers Community Hub</h1>
+          <p>Connect, share experiences, and plan adventures together</p>
+        </div>
+      </section>
+
+      <section class="community-main">
+        <div class="container">
+          <h2 class="section-title">Join The Conversation</h2>
+
+          <div class="community-tabs">
+            <button class="community-tab active" data-tab="discussions">Discussions</button>
+            <button class="community-tab" data-tab="events">Upcoming Events</button>
+            <button class="community-tab" data-tab="members">Featured Members</button>
+          </div>
+
+          <div class="community-content-container">
+            <!-- Discussions Tab Content -->
+            <div class="community-tab-content active" id="discussions">
+              <div class="forum-controls">
+                <div class="search-box">
+                  <input type="text" placeholder="Search discussions...">
+                  <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="new-post">
+                  <a href="#" class="btn-small">Start New Discussion</a>
+                </div>
+              </div>
+
+              <div class="forum-categories">
+                <div class="forum-category">
+                  <h3><i class="fas fa-mountain"></i> Trail Discussions</h3>
+                  <p>Share your experiences and get advice about specific trails</p>
+                  <div class="category-stats">
+                    <span><i class="fas fa-comment"></i> 128 topics</span>
+                    <span><i class="fas fa-users"></i> 1,245 participants</span>
+                  </div>
+                </div>
+
+                <div class="forum-category">
+                  <h3><i class="fas fa-campground"></i> Gear & Equipment</h3>
+                  <p>Recommendations and reviews for trekking gear</p>
+                  <div class="category-stats">
+                    <span><i class="fas fa-comment"></i> 86 topics</span>
+                    <span><i class="fas fa-users"></i> 932 participants</span>
+                  </div>
+                </div>
+
+                <div class="forum-category">
+                  <h3><i class="fas fa-calendar-alt"></i> Trip Planning</h3>
+                  <p>Plan your next adventure and find trekking partners</p>
+                  <div class="category-stats">
+                    <span><i class="fas fa-comment"></i> 94 topics</span>
+                    <span><i class="fas fa-users"></i> 1,053 participants</span>
+                  </div>
+                </div>
+
+                <div class="forum-category">
+                  <h3><i class="fas fa-camera"></i> Photography & Stories</h3>
+                  <p>Share your best shots and trekking stories</p>
+                  <div class="category-stats">
+                    <span><i class="fas fa-comment"></i> 157 topics</span>
+                    <span><i class="fas fa-users"></i> 1,876 participants</span>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="recent-posts-title">Recent Discussions</h3>
+
+              <div class="forum-posts">
+                <div class="forum-post">
+                  <div class="user-info">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User avatar">
+                    <span>Arjun K.</span>
+                  </div>
+                  <div class="post-content">
+                    <h4>Valley of Flowers in Full Bloom</h4>
+                    <p>"Just completed the Valley of Flowers trek. The flowers are in full bloom right now! Don't miss
+                      it if you're planning to go this month. I've attached some photos from our trek last week."</p>
+                  </div>
+                  <div class="post-meta">
+                    <span><i class="far fa-clock"></i> 2 days ago</span>
+                    <span><i class="far fa-comment"></i> 24 comments</span>
+                    <span><i class="far fa-heart"></i> 47 likes</span>
+                  </div>
+                </div>
+
+                <div class="forum-post">
+                  <div class="user-info">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User avatar">
+                    <span>Geeta S.</span>
+                  </div>
+                  <div class="post-content">
+                    <h4>Gear Recommendations for Roopkund Trek</h4>
+                    <p>"Planning to do the Roopkund trek this September. Would appreciate recommendations on what to
+                      pack, especially for the colder sections of the trail. Which sleeping bag worked best for you all?
+                      Any specific brand of trekking poles you'd recommend?"</p>
+                  </div>
+                  <div class="post-meta">
+                    <span><i class="far fa-clock"></i> 4 days ago</span>
+                    <span><i class="far fa-comment"></i> 18 comments</span>
+                    <span><i class="far fa-heart"></i> 12 likes</span>
+                  </div>
+                </div>
+
+                <div class="forum-post">
+                  <div class="user-info">
+                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="User avatar">
+                    <span>Rahul D.</span>
+                  </div>
+                  <div class="post-content">
+                    <h4>Looking for Companions for Kedarkantha Winter Trek</h4>
+                    <p>"Hi everyone! I'm planning to do the Kedarkantha trek this December. Looking for 3-4 fellow
+                      trekkers to join me. I've done several winter treks before, but this will be my first time at
+                      Kedarkantha. Anyone interested in joining?"</p>
+                  </div>
+                  <div class="post-meta">
+                    <span><i class="far fa-clock"></i> 1 week ago</span>
+                    <span><i class="far fa-comment"></i> 31 comments</span>
+                    <span><i class="far fa-heart"></i> 23 likes</span>
+                  </div>
+                </div>
+
+                <div class="forum-post">
+                  <div class="user-info">
+                    <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="User avatar">
+                    <span>Priya M.</span>
+                  </div>
+                  <div class="post-content">
+                    <h4>Dayara Bugyal Photography Tips</h4>
+                    <p>"Just returned from Dayara Bugyal and captured some amazing shots! For those planning to go, the
+                      early morning light on the meadows is simply magical. Here are some camera settings that worked
+                      well for me in different lighting conditions..."</p>
+                  </div>
+                  <div class="post-meta">
+                    <span><i class="far fa-clock"></i> 2 weeks ago</span>
+                    <span><i class="far fa-comment"></i> 42 comments</span>
+                    <span><i class="far fa-heart"></i> 78 likes</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#"><i class="fas fa-angle-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Events Tab Content -->
+            <div class="community-tab-content" id="events">
+              <div class="events-controls">
+                <div class="filter-group">
+                  <label for="event-type">Event Type:</label>
+                  <select id="event-type">
+                    <option value="all">All Events</option>
+                    <option value="treks">Group Treks</option>
+                    <option value="workshops">Workshops</option>
+                    <option value="meetups">Meetups</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="event-month">Month:</label>
+                  <select id="event-month">
+                    <option value="all">All Months</option>
+                    <option value="aug">August 2023</option>
+                    <option value="sep">September 2023</option>
+                    <option value="oct">October 2023</option>
+                    <option value="nov">November 2023</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="event-grid">
+                <div class="event-card">
+                  <div class="event-date">
+                    <span class="day">15</span>
+                    <span class="month">Aug</span>
+                  </div>
+                  <div class="event-info">
+                    <span class="event-type trek">Group Trek</span>
+                    <h3>Valley of Flowers Monsoon Trek</h3>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Meeting Point: Govindghat</p>
+                    <p>Join us for a guided 5-day trek to the magnificent Valley of Flowers during peak flowering
+                      season.</p>
+                    <div class="event-meta">
+                      <span><i class="fas fa-user"></i> Organizer: Bhaskar Singh</span>
+                      <span><i class="fas fa-users"></i> 14/20 spots filled</span>
+                    </div>
+                    <a href="#" class="btn-small">View Details</a>
+                  </div>
+                </div>
+
+                <div class="event-card">
+                  <div class="event-date">
+                    <span class="day">27</span>
+                    <span class="month">Aug</span>
+                  </div>
+                  <div class="event-info">
+                    <span class="event-type workshop">Workshop</span>
+                    <h3>Wilderness First Aid Training</h3>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Location: Dehradun Adventure Center
+                    </p>
+                    <p>Learn essential first aid skills specific to trekking and mountaineering in this hands-on
+                      workshop.</p>
+                    <div class="event-meta">
+                      <span><i class="fas fa-user"></i> Instructor: Dr. Anjali Sharma</span>
+                      <span><i class="fas fa-users"></i> 8/15 spots filled</span>
+                    </div>
+                    <a href="#" class="btn-small">View Details</a>
+                  </div>
+                </div>
+
+                <div class="event-card">
+                  <div class="event-date">
+                    <span class="day">10</span>
+                    <span class="month">Sep</span>
+                  </div>
+                  <div class="event-info">
+                    <span class="event-type meetup">Meetup</span>
+                    <h3>Uttarakhand Trekkers Meetup</h3>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Location: Rishikesh Café</p>
+                    <p>Join fellow trekking enthusiasts for an evening of trail stories, photo sharing, and networking.
+                    </p>
+                    <div class="event-meta">
+                      <span><i class="fas fa-user"></i> Host: Trekker's Companion Team</span>
+                      <span><i class="fas fa-users"></i> 32 attending</span>
+                    </div>
+                    <a href="#" class="btn-small">View Details</a>
+                  </div>
+                </div>
+
+                <div class="event-card">
+                  <div class="event-date">
+                    <span class="day">24</span>
+                    <span class="month">Sep</span>
+                  </div>
+                  <div class="event-info">
+                    <span class="event-type trek">Group Trek</span>
+                    <h3>Dayara Bugyal Autumn Trek</h3>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Meeting Point: Raithal Village</p>
+                    <p>Experience the golden meadows of Dayara Bugyal during autumn with spectacular Himalayan views.
+                    </p>
+                    <div class="event-meta">
+                      <span><i class="fas fa-user"></i> Organizer: Sunita Rawat</span>
+                      <span><i class="fas fa-users"></i> 7/12 spots filled</span>
+                    </div>
+                    <a href="#" class="btn-small">View Details</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="host-event-cta">
+                <h3>Have a trek or event to share?</h3>
+                <p>Organize your own trek, workshop, or meetup and connect with fellow trekking enthusiasts.</p>
+                <a href="#" class="btn">Host an Event</a>
+              </div>
+            </div>
+
+            <!-- Members Tab Content -->
+            <div class="community-tab-content" id="members">
+              <div class="members-search">
+                <input type="text" placeholder="Search members...">
+                <button><i class="fas fa-search"></i></button>
+              </div>
+
+              <div class="featured-members">
+                <h3>Featured Community Members</h3>
+
+                <div class="members-grid">
+                  <div class="member-card">
+                    <div class="member-img">
+                      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Member Avatar">
+                      <span class="member-badge"><i class="fas fa-award"></i></span>
+                    </div>
+                    <div class="member-info">
+                      <h4>Arjun Kumar</h4>
+                      <p class="member-title">Trail Expert</p>
+                      <p class="member-bio">Passionate trekker with over 50 Himalayan treks completed. Photography
+                        enthusiast.</p>
+                      <div class="member-stats">
+                        <span><i class="fas fa-mountain"></i> 54 Treks</span>
+                        <span><i class="fas fa-comment"></i> 128 Posts</span>
+                      </div>
+                      <div class="member-specialties">
+                        <span>High Altitude</span>
+                        <span>Winter Treks</span>
+                        <span>Photography</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="member-card">
+                    <div class="member-img">
+                      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Member Avatar">
+                      <span class="member-badge"><i class="fas fa-award"></i></span>
+                    </div>
+                    <div class="member-info">
+                      <h4>Geeta Singh</h4>
+                      <p class="member-title">Gear Expert</p>
+                      <p class="member-bio">Outdoor equipment specialist and advocate for sustainable trekking
+                        practices.</p>
+                      <div class="member-stats">
+                        <span><i class="fas fa-mountain"></i> 32 Treks</span>
+                        <span><i class="fas fa-comment"></i> 96 Posts</span>
+                      </div>
+                      <div class="member-specialties">
+                        <span>Equipment</span>
+                        <span>Eco-Trekking</span>
+                        <span>River Crossing</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="member-card">
+                    <div class="member-img">
+                      <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Member Avatar">
+                      <span class="member-badge"><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="member-info">
+                      <h4>Rahul Das</h4>
+                      <p class="member-title">Community Leader</p>
+                      <p class="member-bio">Organizes monthly trekking meetups and workshops for novice trekkers.</p>
+                      <div class="member-stats">
+                        <span><i class="fas fa-mountain"></i> 47 Treks</span>
+                        <span><i class="fas fa-comment"></i> 215 Posts</span>
+                      </div>
+                      <div class="member-specialties">
+                        <span>Group Treks</span>
+                        <span>Training</span>
+                        <span>Navigation</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="member-card">
+                    <div class="member-img">
+                      <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Member Avatar">
+                      <span class="member-badge"><i class="fas fa-camera"></i></span>
+                    </div>
+                    <div class="member-info">
+                      <h4>Priya Mehra</h4>
+                      <p class="member-title">Photography Expert</p>
+                      <p class="member-bio">Professional landscape photographer specializing in Himalayan photography.
+                      </p>
+                      <div class="member-stats">
+                        <span><i class="fas fa-mountain"></i> 26 Treks</span>
+                        <span><i class="fas fa-comment"></i> 87 Posts</span>
+                      </div>
+                      <div class="member-specialties">
+                        <span>Photography</span>
+                        <span>Landscapes</span>
+                        <span>Wildlife</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="member-card">
+                    <div class="member-img">
+                      <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Member Avatar">
+                      <span class="member-badge"><i class="fas fa-heartbeat"></i></span>
+                    </div>
+                    <div class="member-info">
+                      <h4>Vikram Joshi</h4>
+                      <p class="member-title">Fitness Expert</p>
+                      <p class="member-bio">Sports physiotherapist sharing fitness tips for high-altitude trekking
+                        preparation.</p>
+                      <div class="member-stats">
+                        <span><i class="fas fa-mountain"></i> 18 Treks</span>
+                        <span><i class="fas fa-comment"></i> 142 Posts</span>
+                      </div>
+                      <div class="member-specialties">
+                        <span>Fitness</span>
+                        <span>Health</span>
+                        <span>Recovery</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="member-card">
+                    <div class="member-img">
+                      <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Member Avatar">
+                      <span class="member-badge"><i class="fas fa-leaf"></i></span>
+                    </div>
+                    <div class="member-info">
+                      <h4>Nisha Kapoor</h4>
+                      <p class="member-title">Ecology Expert</p>
+                      <p class="member-bio">Botanist studying Himalayan flora and promoting conservation during treks.
+                      </p>
+                      <div class="member-stats">
+                        <span><i class="fas fa-mountain"></i> 31 Treks</span>
+                        <span><i class="fas fa-comment"></i> 76 Posts</span>
+                      </div>
+                      <div class="member-specialties">
+                        <span>Botany</span>
+                        <span>Conservation</span>
+                        <span>Education</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="community-stats">
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div class="stat-info">
+                    <h3>5,420+</h3>
+                    <p>Community Members</p>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="fas fa-comments"></i>
+                  </div>
+                  <div class="stat-info">
+                    <h3>12,875+</h3>
+                    <p>Forum Posts</p>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="fas fa-calendar-check"></i>
+                  </div>
+                  <div class="stat-info">
+                    <h3>268+</h3>
+                    <p>Events Organized</p>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="fas fa-mountain"></i>
+                  </div>
+                  <div class="stat-info">
+                    <h3>845+</h3>
+                    <p>Trek Reports</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="join-community-cta">
+        <div class="container">
+          <h2>Become Part of Our Trekking Community</h2>
+          <p>Connect with like-minded outdoor enthusiasts, share your experiences, get expert advice, and make lifelong
+            friends.</p>
+          <div class="cta-buttons">
+            <a href="#" class="btn">Create Your Account</a>
+            <a href="#" class="btn btn-secondary">Browse Forum</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Trekker's Companion</h3>
+          <p>Your All-in-One Uttarakhand Trekking App</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trails.html">Trails</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe for trek updates and exclusive offers</p>
+          <form>
+            <input type="email" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Trekker's Companion. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Community page tab switching functionality
+      document.addEventListener('DOMContentLoaded', function () {
+        const tabButtons = document.querySelectorAll('.community-tab');
+        const tabContents = document.querySelectorAll('.community-tab-content');
+
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            // Show corresponding content
+            const tabId = button.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+          });
+        });
+      });
+    </script>
+</body>
+
+</html>

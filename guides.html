@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Guides - Trekker's Companion</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>Trekker's Companion</h1>
+      <p>Your All-in-One Uttarakhand Trekking App</p>
+    </div>
+    <nav>
+      <ul>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="trails.html">Trails</a></li>
+        <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <a href="#" class="btn btn-small login-btn">Login</a>
+      <a href="#" class="btn btn-small signup-btn">Sign Up</a>
+    </div>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+  <main style="padding-top: 8rem;">
+    <section class="trails-hero">
+      <div class="trails-hero-content">
+        <h1>Meet Our Expert Guides</h1>
+        <p>Explore the Himalayas with our experienced local guides</p>
+      </div>
+    </section>
+
+    <section class="guides-filter">
+      <div class="container">
+        <div class="filter-controls">
+          <div class="filter-group">
+            <label for="specialty">Specialty:</label>
+            <select id="specialty">
+              <option value="all">All Specialties</option>
+              <option value="high-altitude">High Altitude</option>
+              <option value="wildlife">Wildlife & Photography</option>
+              <option value="cultural">Cultural Expert</option>
+              <option value="mountaineering">Mountaineering</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="experience">Experience:</label>
+            <select id="experience">
+              <option value="all">Any Experience</option>
+              <option value="0-5">0-5 Years</option>
+              <option value="5-10">5-10 Years</option>
+              <option value="10+">10+ Years</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="language">Language:</label>
+            <select id="language">
+              <option value="all">Any Language</option>
+              <option value="english">English</option>
+              <option value="hindi">Hindi</option>
+              <option value="garhwali">Garhwali</option>
+              <option value="kumaoni">Kumaoni</option>
+            </select>
+          </div>
+          <button id="filter-button" class="btn-small">Apply Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="all-guides">
+      <div class="container">
+        <div class="guides-grid">
+          <!-- Featured Guide -->
+          <div class="guide-card">
+            <div class="guide-img"
+              style="background-image: url('https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+            </div>
+            <div class="guide-info">
+              <h3>Bhaskar Singh</h3>
+              <p class="guide-specialty">High Altitude Expert</p>
+              <p>With over 20 years of experience in the Uttarakhand mountains, Bhaskar knows every trail and peak like
+                the back of his hand. Specializes in challenging high-altitude treks.</p>
+              <div class="guide-meta">
+                <span><i class="fas fa-mountain"></i> 200+ Treks</span>
+                <span><i class="fas fa-language"></i> English, Hindi, Garhwali</span>
+              </div>
+              <a href="#" class="btn-small">Book Guide</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-img"
+              style="background-image: url('https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+            </div>
+            <div class="guide-info">
+              <h3>Sunita Rawat</h3>
+              <p class="guide-specialty">Wildlife & Photography Expert</p>
+              <p>Sunita combines her passion for wildlife conservation with expertise in mountain photography. Her
+                knowledge of local flora and fauna makes every trek a learning experience.</p>
+              <div class="guide-meta">
+                <span><i class="fas fa-mountain"></i> 150+ Treks</span>
+                <span><i class="fas fa-language"></i> English, Hindi</span>
+              </div>
+              <a href="#" class="btn-small">Book Guide</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-img"
+              style="background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+            </div>
+            <div class="guide-info">
+              <h3>Alok Negi</h3>
+              <p class="guide-specialty">Cultural & Heritage Expert</p>
+              <p>Born and raised in a remote Himalayan village, Alok offers unique insights into local traditions,
+                folklore, and sustainable mountain living practices.</p>
+              <div class="guide-meta">
+                <span><i class="fas fa-mountain"></i> 120+ Treks</span>
+                <span><i class="fas fa-language"></i> English, Hindi, Garhwali</span>
+              </div>
+              <a href="#" class="btn-small">Book Guide</a>
+            </div>
+          </div>
+
+          <!-- Additional Guides -->
+          <div class="guide-card">
+            <div class="guide-img"
+              style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+            </div>
+            <div class="guide-info">
+              <h3>Rajesh Sharma</h3>
+              <p class="guide-specialty">High Altitude Specialist</p>
+              <p>With over 15 years of experience guiding treks in Uttarakhand, Rajesh specializes in high-altitude
+                expeditions.</p>
+              <div class="guide-meta">
+                <span><i class="fas fa-mountain"></i> 180+ Treks</span>
+                <span><i class="fas fa-language"></i> English, Hindi</span>
+              </div>
+              <a href="#" class="btn-small">Book Guide</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-img"
+              style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+            </div>
+            <div class="guide-info">
+              <h3>Divya Tomar</h3>
+              <p class="guide-specialty">Wildlife & Photography Expert</p>
+              <p>Divya combines her passion for wildlife conservation with her expertise in mountain photography.</p>
+              <div class="guide-meta">
+                <span><i class="fas fa-mountain"></i> 120+ Treks</span>
+                <span><i class="fas fa-language"></i> English, Hindi, Kumaoni</span>
+              </div>
+              <a href="#" class="btn-small">Book Guide</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-img"
+              style="background-image: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+            </div>
+            <div class="guide-info">
+              <h3>Meera Singh</h3>
+              <p class="guide-specialty">Cultural Expert</p>
+              <p>Meera's knowledge of local traditions and mountain communities enhances the cultural experience of your
+                trek.</p>
+              <div class="guide-meta">
+                <span><i class="fas fa-mountain"></i> 90+ Treks</span>
+                <span><i class="fas fa-language"></i> English, Hindi, Garhwali</span>
+              </div>
+              <a href="#" class="btn-small">Book Guide</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-img"
+              style="background-image: url('https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+            </div>
+            <div class="guide-info">
+              <h3>Vikram Rana</h3>
+              <p class="guide-specialty">Mountaineering Expert</p>
+              <p>A certified mountaineer with experience on some of the toughest peaks in the Himalayas, Vikram
+                specializes in technical climbing expeditions.</p>
+              <div class="guide-meta">
+                <span><i class="fas fa-mountain"></i> 150+ Expeditions</span>
+                <span><i class="fas fa-language"></i> English, Hindi</span>
+              </div>
+              <a href="#" class="btn-small">Book Guide</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-img"
+              style="background-image: url('https://images.unsplash.com/photo-1590086782957-93c06ef21604?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+            </div>
+            <div class="guide-info">
+              <h3>Pooja Negi</h3>
+              <p class="guide-specialty">Adventure & Camping Expert</p>
+              <p>Pooja's enthusiasm for adventure and knowledge of the best camping spots ensures a comfortable and
+                exciting trekking experience.</p>
+              <div class="guide-meta">
+                <span><i class="fas fa-mountain"></i> 100+ Treks</span>
+                <span><i class="fas fa-language"></i> English, Hindi, Kumaoni</span>
+              </div>
+              <a href="#" class="btn-small">Book Guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-cta">
+      <div class="guide-cta-content">
+        <h2>Become a Guide</h2>
+        <p>Are you an experienced trekker or local expert from Uttarakhand? Join our platform to share your knowledge
+          and earn by guiding fellow trekkers through the magnificent Himalayan trails.</p>
+        <a href="#" class="btn">Apply Now</a>
+      </div>
+    </section>
+  </main>
+      <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>Trekker's Companion</h3>
+            <p>Your All-in-One Uttarakhand Trekking App</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="trails.html">Trails</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="community.html">Community</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for trek updates and exclusive offers</p>
+            <form>
+              <input type="email" placeholder="Your Email">
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Trekker's Companion. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <script src="script.js"></script>
+</body>
+
+</html>

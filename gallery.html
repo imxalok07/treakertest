@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Trekker's Companion</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>Trekker's Companion</h1>
+      <p>Your All-in-One Uttarakhand Trekking App</p>
+    </div>
+    <nav>
+      <ul>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="trails.html">Trails</a></li>
+        <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <a href="#" class="btn btn-small login-btn">Login</a>
+      <a href="#" class="btn btn-small signup-btn">Sign Up</a>
+    </div>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+  <main style="padding-top: 8rem;">
+    <section class="trails-hero">
+      <div class="trails-hero-content">
+        <h1>Uttarakhand Gallery</h1>
+        <p>Breathtaking views from the Land of Gods</p>
+      </div>
+    </section>
+
+    <section class="gallery-main">
+      <div class="container">
+        <h2 class="section-title">Discover Uttarakhand</h2>
+        <div class="gallery-categories">
+          <button class="gallery-filter active" data-filter="all">All</button>
+          <button class="gallery-filter" data-filter="landscapes">Landscapes</button>
+          <button class="gallery-filter" data-filter="trails">Trails</button>
+          <button class="gallery-filter" data-filter="culture">Culture</button>
+          <button class="gallery-filter" data-filter="wildlife">Wildlife</button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Using your attached assets for the gallery -->
+          <div class="gallery-item" data-category="landscapes">
+            <img src="attached_assets/pexels-jedrzej-koralewski-14125120-16473050.jpg" alt="Mountainous landscape">
+            <div class="gallery-caption">
+              <h3>Himalayan Peaks</h3>
+              <p>Majestic mountain views in Uttarakhand</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="landscapes">
+            <img src="attached_assets/pexels-eberhardgross-1287135.jpg" alt="Mountain Peaks">
+            <div class="gallery-caption">
+              <h3>Mountain Range</h3>
+              <p>The stunning Himalayan ranges</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="landscapes">
+            <img src="attached_assets/pexels-vivek-sakhargade-837724-12151764.jpg" alt="Mountain Valley">
+            <div class="gallery-caption">
+              <h3>Serene Valley</h3>
+              <p>Peaceful valleys nestled between mountains</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="trails">
+            <img src="attached_assets/pexels-arindam-chowdhury-749288-13001517.jpg" alt="Mountain Trail">
+            <div class="gallery-caption">
+              <h3>Forest Trail</h3>
+              <p>Hiking through the dense forests</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="wildlife">
+            <img src="attached_assets/pexels-webbshow-2406452.jpg" alt="Wildlife">
+            <div class="gallery-caption">
+              <h3>Local Wildlife</h3>
+              <p>Discover the diverse fauna of Uttarakhand</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="culture">
+            <img src="attached_assets/pexels-vraj-shah-115200-924844.jpg" alt="Local Market">
+            <div class="gallery-caption">
+              <h3>Cultural Heritage</h3>
+              <p>Experience the rich culture of the mountain communities</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="landscapes">
+            <img src="attached_assets/pexels-mihirjadhav03-1752369.jpg" alt="Mountain">
+            <div class="gallery-caption">
+              <h3>Mountain Majesty</h3>
+              <p>Towering mountains against the sky</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="trails">
+            <img src="attached_assets/pexels-sanket-barik-2808574-7846659.jpg" alt="Misty Trail">
+            <div class="gallery-caption">
+              <h3>Misty Paths</h3>
+              <p>Atmospheric trails through the mist</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="landscapes">
+            <img src="attached_assets/pexels-thephotosaccount-31068549.jpg" alt="Valley View">
+            <div class="gallery-caption">
+              <h3>Valley of Flowers</h3>
+              <p>The famous UNESCO World Heritage site</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="culture">
+            <img src="attached_assets/istockphoto-507204606-1024x1024.jpg" alt="Local Culture">
+            <div class="gallery-caption">
+              <h3>Traditional Living</h3>
+              <p>Local lifestyle in the mountain villages</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="landscapes">
+            <img src="attached_assets/pexels-saurav-negi-2149365087-30807615.jpg" alt="Mountain Lake">
+            <div class="gallery-caption">
+              <h3>Himalayan Lakes</h3>
+              <p>Crystal clear mountain lakes</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="trails">
+            <img src="attached_assets/pexels-saheb-santanu-767020986-30434161.jpg" alt="Trek Path">
+            <div class="gallery-caption">
+              <h3>Trekking Trails</h3>
+              <p>Adventure awaits on these scenic paths</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-container">
+        <h2>Ready to Experience These Views Firsthand?</h2>
+        <p>Create an account to plan your trek through the beautiful landscapes of Uttarakhand.</p>
+        <a href="#" class="btn">Create Your Account</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>Trekker's Companion</h3>
+        <p>Your All-in-One Uttarakhand Trekking App</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="trails.html">Trails</a></li>
+          <li><a href="guides.html">Guides</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe for trek updates and exclusive offers</p>
+        <form>
+          <input type="email" placeholder="Your Email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Trekker's Companion. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script defer>
+    // Gallery filtering functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.gallery-filter');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+
+          // Add active class to clicked button
+          button.classList.add('active');
+
+          const filterValue = button.getAttribute('data-filter');
+
+          galleryItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Trekker's Companion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #ff6f00;
+            --dark-color: #333;
+            --light-color: #f9f9f9;
+            --primary-font: 'Poppins', sans-serif;
+            --secondary-font: 'Playfair Display', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.admin-body {
+            font-family: var(--primary-font);
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .admin-dashboard {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Admin Navigation */
+        .admin-nav {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 20px;
+            width: 250px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .admin-nav h2 {
+            font-family: var(--secondary-font);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .admin-nav ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .admin-nav ul li {
+            margin-bottom: 15px;
+        }
+
+        .admin-nav ul li a {
+            display: block;
+            color: var(--light-color);
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .admin-nav ul li a:hover,
+        .admin-nav ul li a.active {
+            background-color: var(--primary-color);
+        }
+
+        .admin-nav ul li a i {
+            margin-right: 8px;
+        }
+
+        #logoutBtn {
+            margin-top: auto;
+            display: block;
+            color: var(--light-color);
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+
+        #logoutBtn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Admin Content */
+        .admin-content {
+            flex-grow: 1;
+            padding: 30px;
+            background-color: var(--light-color);
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .content-section h3 {
+            font-family: var(--secondary-font);
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .add-btn {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .add-btn:hover {
+            background-color: #1b5e20;
+        }
+
+        /* Forms */
+        .admin-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .admin-form h4 {
+            font-family: var(--secondary-font);
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .admin-form button[type="submit"] {
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .admin-form button[type="submit"]:hover {
+            background-color: #e65100;
+        }
+
+        .cancel-btn {
+            background-color: #ccc;
+            color: var(--dark-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cancel-btn:hover {
+            background-color: #b0b0b0;
+        }
+
+        /* Lists */
+        .admin-list table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .admin-list th,
+        .admin-list td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .admin-list th {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+        }
+
+        .admin-list tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .edit-btn {
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            margin-right: 5px;
+        }
+
+        .edit-btn:hover {
+            background-color: #e65100;
+        }
+
+        .delete-btn {
+            background-color: #d32f2f;
+            color: var(--light-color);
+        }
+
+        .delete-btn:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .admin-nav {
+                width: 200px;
+                position: fixed;
+                height: 100vh;
+                transform: translateX(-200px);
+                transition: transform 0.3s ease;
+            }
+
+            .admin-nav.active {
+                transform: translateX(0);
+            }
+
+            .admin-content {
+                margin-left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 1.5rem;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .admin-list table,
+            .admin-list thead,
+            .admin-list tbody,
+            .admin-list th,
+            .admin-list td,
+            .admin-list tr {
+                display: block;
+            }
+
+            .admin-list th {
+                display: none;
+            }
+
+            .admin-list td {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                border-bottom: none;
+            }
+
+            .admin-list td:before {
+                content: attr(data-label);
+                font-weight: bold;
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body class="admin-body">
+    <div class="admin-dashboard">
+        <nav class="admin-nav" aria-label="Admin Navigation">
+            <h2>Admin Dashboard</h2>
+            <ul>
+                <li><a href="#" class="active" data-section="trails" aria-current="page"><i class="fas fa-hiking"></i> Manage Trails</a></li>
+                <li><a href="#" data-section="guides"><i class="fas fa-users"></i> Manage Guides</a></li>
+                <li><a href="#" data-section="gallery"><i class="fas fa-images"></i> Manage Gallery</a></li>
+                <li><button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
+            </ul>
+        </nav>
+
+        <div class="admin-content">
+            <!-- Trails Section -->
+            <section id="trails-section" class="content-section active" aria-labelledby="trails-heading">
+                <h3 id="trails-heading"><i class="fas fa-hiking"></i> Manage Trails</h3>
+                <button class="add-btn" onclick="showTrailForm()">Add New Trail</button>
+
+                <div class="admin-form" id="trailForm">
+                    <h4>Add/Edit Trail</h4>
+                    <form id="addTrailForm">
+                        <div class="form-group">
+                            <label for="trailName">Trail Name</label>
+                            <input type="text" id="trailName" name="trailName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="difficulty">Difficulty</label>
+                            <select id="difficulty" name="difficulty" required>
+                                <option value="easy">Easy</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="difficult">Difficult</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration (days)</label>
+                            <input type="number" id="duration" name="duration" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="season">Best Season</label>
+                            <input type="text" id="season" name="season" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="altitude">Altitude (m)</label>
+                            <input type="number" id="altitude" name="altitude" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="trailImage">Trail Image</label>
+                            <input type="file" id="trailImage" name="trailImage" accept="image/*" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit">Save Trail</button>
+                            <button type="button" class="cancel-btn" onclick="hideTrailForm()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="trails-list" class="admin-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Difficulty</th>
+                                <th>Duration</th>
+                                <th>Season</th>
+                                <th>Altitude</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="trails-table-body">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Guides Section (Unchanged) -->
+            <section id="guides-section" class="content-section" aria-labelledby="guides-heading">
+                <h3 id="guides-heading"><i class="fas fa-users"></i> Manage Guides</h3>
+                <button class="add-btn" onclick="showGuideForm()">Add New Guide</button>
+
+                <div class="admin-form" id="guideForm">
+                    <h4>Add/Edit Guide</h4>
+                    <form id="addGuideForm">
+                        <div class="form-group">
+                            <label for="guideName">Guide Name</label>
+                            <input type="text" id="guideName" name="guideName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialty">Specialty</label>
+                            <select id="specialty" name="specialty" required>
+                                <option value="high-altitude">High Altitude Expert</option>
+                                <option value="wildlife">Wildlife & Photography</option>
+                                <option value="cultural">Cultural Expert</option>
+                                <option value="mountaineering">Mountaineering</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Experience (years)</label>
+                            <input type="number" id="experience" name="experience" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="languages">Languages</label>
+                            <input type="text" id="languages" name="languages" placeholder="e.g., English, Hindi, Garhwali" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea id="bio" name="bio" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="guideImage">Profile Image</label>
+                            <input type="file" id="guideImage" name="guideImage" accept="image/*" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit">Save Guide</button>
+                            <button type="button" class="cancel-btn" onclick="hideGuideForm()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="guides-list" class="admin-list">
+                    <p>List of guides will be dynamically loaded here.</p>
+                </div>
+            </section>
+
+            <!-- Gallery Section (Unchanged) -->
+            <section id="gallery-section" class="content-section" aria-labelledby="gallery-heading">
+                <h3 id="gallery-heading"><i class="fas fa-images"></i> Manage Gallery</h3>
+                <button class="add-btn" onclick="showGalleryForm()">Add New Image</button>
+
+                <div class="admin-form" id="galleryForm">
+                    <h4>Add/Edit Gallery Image</h4>
+                    <form id="addGalleryForm">
+                        <div class="form-group">
+                            <label for="imageTitle">Image Title</label>
+                            <input type="text" id="imageTitle" name="imageTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" required>
+                                <option value="landscapes">Landscapes</option>
+                                <option value="trails">Trails</option>
+                                <option value="culture">Culture</option>
+                                <option value="wildlife">Wildlife</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="galleryDescription">Description</label>
+                            <textarea id="galleryDescription" name="description" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="galleryImage">Image</label>
+                            <input type="file" id="galleryImage" name="galleryImage" accept="image/*" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit">Save Image</button>
+                            <button type="button" class="cancel-btn" onclick="hideGalleryForm()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="gallery-list" class="admin-list">
+                    <p>List of gallery images will be dynamically loaded here.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Debounce function
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Navigation
+        const navLinks = document.querySelectorAll('.admin-nav a');
+        const contentSections = document.querySelectorAll('.content-section');
+        const adminForms = document.querySelectorAll('.admin-form');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const sectionId = this.dataset.section + '-section';
+
+                navLinks.forEach(navLink => navLink.classList.remove('active'));
+                this.classList.add('active');
+
+                contentSections.forEach(section => section.classList.remove('active'));
+                document.getElementById(sectionId).classList.add('active');
+
+                adminForms.forEach(form => form.style.display = 'none');
+            });
+        });
+
+        // Form visibility
+        function showTrailForm(trail = null) {
+            const form = document.getElementById('trailForm');
+            form.style.display = 'block';
+            document.getElementById('guideForm').style.display = 'none';
+            document.getElementById('galleryForm').style.display = 'none';
+
+            // Populate form for editing
+            if (trail) {
+                document.getElementById('trailName').value = trail.name;
+                document.getElementById('difficulty').value = trail.difficulty;
+                document.getElementById('duration').value = trail.duration;
+                document.getElementById('season').value = trail.season;
+                document.getElementById('altitude').value = trail.altitude;
+                document.getElementById('description').value = trail.description;
+                // Image field remains unchanged as it's a file input
+                form.dataset.editId = trail.id;
+            } else {
+                form.querySelector('form').reset();
+                delete form.dataset.editId;
+            }
+        }
+
+        function hideTrailForm() {
+            document.getElementById('trailForm').style.display = 'none';
+        }
+
+        function showGuideForm() {
+            document.getElementById('guideForm').style.display = 'block';
+            document.getElementById('trailForm').style.display = 'none';
+            document.getElementById('galleryForm').style.display = 'none';
+        }
+
+        function hideGuideForm() {
+            document.getElementById('guideForm').style.display = 'none';
+        }
+
+        function showGalleryForm() {
+            document.getElementById('galleryForm').style.display = 'block';
+            document.getElementById('trailForm').style.display = 'none';
+            document.getElementById('guideForm').style.display = 'none';
+        }
+
+        function hideGalleryForm() {
+            document.getElementById('galleryForm').style.display = 'none';
+        }
+
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            alert('Logging out...');
+            window.location.href = 'index.html';
+        });
+
+        // Trail Data from trails.html
+        const trails = [
+            {
+                id: 1,
+                name: 'Valley of Flowers',
+                difficulty: 'moderate',
+                duration: 6,
+                season: 'Jul-Sep',
+                altitude: 3658,
+                description: 'A mesmerizing trek through vibrant alpine flowers in the Nanda Devi Biosphere Reserve.',
+                image: 'attached_assets/valley of flowers..jpg'
+            },
+            {
+                id: 2,
+                name: 'Roopkund Trek',
+                difficulty: 'difficult',
+                duration: 8,
+                season: 'May-Jun, Sep-Oct',
+                altitude: 5029,
+                description: 'A challenging trek to a mysterious glacial lake filled with ancient skeletons.',
+                image: 'attached_assets/rupkundh.jpg'
+            },
+            {
+                id: 3,
+                name: 'Dayara Bugyal',
+                difficulty: 'easy',
+                duration: 4,
+                season: 'Apr-Jun, Sep-Nov',
+                altitude: 3600,
+                description: 'A beautiful meadow trek perfect for beginners with stunning views of the Himalayan range.',
+                image: 'attached_assets/Daraya bugyal.jpg'
+            },
+            {
+                id: 4,
+                name: 'Har Ki Dun',
+                difficulty: 'difficult',
+                duration: 7,
+                season: 'Mar-Jun, Sep-Nov',
+                altitude: 3566,
+                description: 'An ancient trail with stunning views of Swargarohini peaks and unique Himalayan villages.',
+                image: 'attached_assets/har ki dun.webp'
+            },
+            {
+                id: 5,
+                name: 'Chopta Chandrashila',
+                difficulty: 'moderate',
+                duration: 5,
+                season: 'Apr-Jun, Sep-Nov',
+                altitude: 4000,
+                description: 'Trek through pristine forests to Tungnath temple and Chandrashila peak with 360° Himalayan views.',
+                image: 'attached_assets/CHOPTA CHANDRSHILA.jpg'
+            },
+            {
+                id: 6,
+                name: 'Nag Tibba',
+                difficulty: 'easy',
+                duration: 2,
+                season: 'Oct-Jun',
+                altitude: 3050,
+                description: 'A perfect weekend trek near Mussoorie with great views of Bandarpunch and Swargarohini ranges.',
+                image: 'attached_assets/nag tibba.jpg'
+            },
+            {
+                id: 7,
+                name: 'Kedartal',
+                difficulty: 'difficult',
+                duration: 7,
+                season: 'May-Jun, Sep-Oct',
+                altitude: 4912,
+                description: 'A challenging high-altitude trek to the emerald Kedartal lake with views of Thalaysagar peak.',
+                image: 'https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=800'
+            },
+            {
+                id: 8,
+                name: 'Kuari Pass',
+                difficulty: 'moderate',
+                duration: 6,
+                season: 'Apr-Jun, Sep-Nov',
+                altitude: 3876,
+                description: 'Lord Curzon\'s trail with panoramic views of Nanda Devi, Dronagiri, and Kamet peaks.',
+                image: 'attached_assets/KURI PASS.webp'
+            },
+            {
+                id: 9,
+                name: 'Deoria Tal',
+                difficulty: 'easy',
+                duration: 2,
+                season: 'Year-round',
+                altitude: 2438,
+                description: 'A beautiful lake trek with perfect reflections of Chaukhamba peaks in the crystal clear waters.',
+                image: 'attached_assets/Daraya bugyal.jpg'
+            }
+        ];
+
+        // Populate Trails List
+        function populateTrails() {
+            const tableBody = document.getElementById('trails-table-body');
+            tableBody.innerHTML = '';
+            trails.forEach(trail => {
+                tableBody.innerHTML += `
+                    <tr>
+                        <td data-label="Name">${trail.name}</td>
+                        <td data-label="Difficulty">${trail.difficulty.charAt(0).toUpperCase() + trail.difficulty.slice(1)}</td>
+                        <td data-label="Duration">${trail.duration} days</td>
+                        <td data-label="Season">${trail.season}</td>
+                        <td data-label="Altitude">${trail.altitude} m</td>
+                        <td data-label="Actions">
+                            <button class="action-btn edit-btn" onclick="editTrail(${trail.id})">Edit</button>
+                            <button class="action-btn delete-btn" onclick="deleteTrail(${trail.id})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        // Edit Trail
+        function editTrail(id) {
+            const trail = trails.find(t => t.id === id);
+            if (trail) {
+                showTrailForm(trail);
+            }
+        }
+
+        // Delete Trail
+        function deleteTrail(id) {
+            if (confirm(`Are you sure you want to delete the trail with ID: ${id}?`)) {
+                const index = trails.findIndex(t => t.id === id);
+                if (index !== -1) {
+                    trails.splice(index, 1);
+                    populateTrails();
+                    alert(`Trail ${id} deleted`);
+                }
+            }
+        }
+
+        // Form Submission
+        document.getElementById('addTrailForm').addEventListener('submit', e => {
+            e.preventDefault();
+            const form = e.target;
+            const trailData = {
+                id: form.dataset.editId ? parseInt(form.dataset.editId) : trails.length + 1,
+                name: form.trailName.value,
+                difficulty: form.difficulty.value,
+                duration: parseInt(form.duration.value),
+                season: form.season.value,
+                altitude: parseInt(form.altitude.value),
+                description: form.description.value,
+                image: form.trailImage.files[0] ? URL.createObjectURL(form.trailImage.files[0]) : ''
+            };
+
+            if (form.dataset.editId) {
+                const index = trails.findIndex(t => t.id === parseInt(form.dataset.editId));
+                if (index !== -1) {
+                    trails[index] = trailData;
+                    alert('Trail updated!');
+                }
+            } else {
+                trails.push(trailData);
+                alert('Trail added!');
+            }
+
+            populateTrails();
+            hideTrailForm();
+            form.reset();
+        });
+
+        // Initialize
+        populateTrails();
+    </script>
+</body>
+</html>
